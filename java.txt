@@ -1,0 +1,133 @@
+JDK - Java Development Kit -> JRE (JVM + Libraries) + Development Tools (javac, java, jar, javadoc, jdb) ,Editions -> Java SE, Java EE, Java ME
+JRE - Java Runtime Environment-> JVM(bytecode Ex, GC, MM, Sec) + Libraries(lang, util, Integration) + Deployment Tech(Java Web Start, Plug in)
+JVM - Java Virtual Machine -> Write Once , Run Anywhere ,CLassLoader -> ByteCode Verifier -> Runtime Data Areas -> Interpreter -> JIT 
+JIT - Just In Time Compiler -> 
+Java Libraries -> JAva APIs collections of prewritten classes,interfaces and methods are organized into packages. -> import java.util.ArrayList;
+java.lang -> core language package -> automatically imported in every program 
+java.util -> backbone of java utilities -> Collections, Implementations, Utilities, Stream , Function
+java.io -> Input/Output packages & java.nio -> advanced for buffer oriented
+java.net -> Networking package  
+java.time -> Date and Time
+java.math, java.sql
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+Method Area	-> Stores class-level data (methods, fields, constants).
+Heap -> Stores objects and arrays. Shared across threads.
+Java Stack -> Stores method calls and local variables. One per thread.
+First Program
+public static void main(){} -> access modifier, no object needed, no return type, entry point
+Static Members -> Variables(For all instance in a class), Methods(No need for object), Class(used for nested classes), Blocks(runs once when class loaded)
+Non-Static Memebers -> Variables(To a particular object), Methods(Need object), Class(default), Constructor(intilaization of objects)
+Static vs Non-Static
+This -> Access instance variable(this.var),Call another constructor(this(args)),Pass current object(method(this)), Return current object(return this)
+Call current class method(this.method()), Print object reference(System.out.println(this)), Refer to outer class in inner(Outer.this)
+Data Types -> Primitive and Non-Primitive (Reference)
+Type Casting -> Implicit(Lower -> Higher) and Explicit(Higher -> Lower)
+Identifiers -> names are used to identify the variables, methods, classes, etc .......
+Wrapper Classes and Auto Boxing(Primitive -> Wrapper) & UnBoxing(Wrappper -> Primitive)
+Operators and Assignments
+Flow Control Statements -> if,else if, else (JVM evaluates conditions top-down.), switch(JUMP TABLES to quickly select the matching case)
+Loops(repeat a block of code multiple times) -> for(Count-Controlled Iteration), while(Entry Controlled)(Condition-Controlled Iteration) -> do-while (Exit Controlled)
+Methods -> Specific task -> Instance Method, Static Method, Void Method, Return Method, Parameterized Method, Method Overloading
+Arrays -> object in Java that holds a fixed number of elements of the same type.
+Packages -> Naming Convention, Directory Mapping, Access Control
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+OOP's -> Object Oriented Programming is a programming paradigm that organizes software design around objects and classes, promoting modularity, reusability, and scalability.
+Class -> A class is a blueprint for creating objects. It defines fields (attributes) and methods (behaviors).
+Object -> An object is an instance of a class. It holds actual values for the fields and can invoke methods.
+Access Modifiers -> public(Accessible from anywhere) ,private(Accessible only within the class),protected(Accessible within the package and subclasses, Default(Accessible only within the package).
+Inheritance -> Allows a class to inherit fields and methods from another class.Promotes code reuse and hierarchical classification.
+Single, Multilevel, Hierarchical, Multiple (through Interface) 
+Encapsulation -> Bundles data (fields) and methods that operate on the data into one unit. Achieved using private fields and public getters/setters.
+Abstraction -> Hides implementation details and shows only essential features.
+Abstract Class -> An abstract class is a class that cannot be instantiated and may contain both abstract methods (without implementation) and concrete methods (with implementation).
+Interface -> An interface is a contract that defines a set of methods a class must implement. It promotes multiple inheritance and loose coupling.
+Polymorphism -> Means "many forms". Enables one interface to be used for different data types. It is in two types.
+OverLoading(Compile Time) -> Same method name with different parameter lists. 
+OverRiding(Run Time) -> Subclass provides a specific implementation of a method already defined in its superclass. The return type is dynamic.
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+Final Keyword-> to declare the constants and prevent modification. Variables(cannot modify), Method(cannot overridden), Class(cannot extend)
+String Functions -> length() Returns string length, charAt(int index) Gets character at index, substring(int start, int end) Extracts substring, equals(String other) Compares content, toUpperCase() / toLowerCase(), trim() Removes leading/trailing spaces, split(String regex) Splits string by pattern, replace(char old, char new) Replaces characters.
+Comments -> Single-line: // This is a comment, Multi-line: /* This is a block comment */, Documentation: /** This is a Javadoc comment */
+Default Values -> int, byte, short, long = 0, float = 0.0f, double = 0.0d, char = '\u0000' (null character), boolean = false, Object references = null
+Enum(Collection of Constants) -> is a special Java type used to define a fixed set of constants.
+Inner Class -> An inner class is a class defined within another class.
+Array Functions -> equals, fill, sort, toString, copyOf
+Math Functions -> abs, min, max, round, ceil, floor, random, pow, sqrt
+Debugging -> Debugging is the process of identifying and fixing errors or unexpected behavior in code. Debuggers connect to JVM using Java Debug Wire Protocol (JDWP) to inspect threads, variables, and call stacks.
+Time Types -> Date, Calendar, Time Zones
+Input -> Scanner - To read input from the console, System.in - Standard input stream, FileReader, BufferedReader, FileInputStream, BufferedInputStream
+Output -> System.out: Standard output stream, print, println, printf, FileWriter, BufferedWriter, FileOutputStream, BufferedOutputStream
+String(Immutable) -> A sequence of characters that cannot be changed once created.Internally uses a char[] array. Any modification creates a new object Stored in String Pool.
+StringBuilder(Mutable, Not ThreadSafe) -> A mutable sequence of characters designed for efficient string manipulation.Faster than String and StringBuffer for single-threaded operations.
+StringBuffer(Mutable, ThreadSafe) -> A mutable sequence of characters similar to StringBuilder. Slower than StringBuilder.
+Object (The SuperClass) -> The Root of All Classes -> Clone (Interface -> Cloneable), Equals (Reference), finalize (GC), getClass(), hashCode(), toString()
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+Iterable(I) -> Root interface that allows objects to be the target of the enhanced for-each loop.
+Collection(I) -> Base interface for all collections (except maps). Provides basic operations like add(), remove(), size(), etc.
+List (I) -> A subtype of Collection that represents an insertion ordered collection (sequence) that allows duplicate elements.
+ListIterator is a special iterator provided by the List interface that allows -> Forward and backward traversal, Element modification during iteration(add, set), Index tracking (get).
+Iterator -> used to traverse elements of a collection (like ArrayList, HashSet, etc.) one at a time. It provides a safe and consistent way to access and optionally remove elements during iteration.
+ArrayList -> is a resizable array implementation of the List interface. It allows duplicate elements, maintains insertion order, and supports random access.
+default capacity 10. ArrayList resizes its internal array (grow() method). trimToSize() Shrinks internal array to match current size. Saves memory when list won’t grow further.
+LinkedList -> is a doubly-linked list implementation of the List and Deque interfaces. It allows nulls, duplicates, and maintains insertion order. Each element is stored in a Node containing: Data, Reference to previous node, Reference to next node.
+doubly-linked list -> means each node in the list maintains references to both its previous and next nodes, allowing efficient bidirectional traversal, insertions, and deletions.
+Vector -> is a class, Thread-safe: All methods are synchronized. Resizable - Automatically grows as elements are added. Maintains insertion order. Allows duplicates and nulls. Implements: List, RandomAccess, Cloneable, Serializable.
+Stack(LILO) -> is a class, LIFO structure - Last element added is the first to be removed. Thread-safe - Inherits synchronization from Vector. Extends Vector: Inherits all methods of Vector. push(), pop(), peek(), empty(), search().
+Queue(FIFO) -> FIFO ordering, Used for task scheduling, buffering, and request handling, Allows duplicates, Can be bounded or unbounded.
+Deque(Double-Ended Queue)(FIFO & LILO) -> allows insertion and removal from both ends, Can act as stack or queue, More flexible than Queue, No capacity restrictions in most implementations
+PriorityQueue -> A PriorityQueue is a special type of queue where elements are ordered by priority, not by insertion time. It uses a binary heap internally. Default ordering is natural (e.g., ascending for numbers)
+ArrayDeque -> An ArrayDeque is a resizable array-based implementation of the Deque interface. It is faster than LinkedList for stack and queue operations. No capacity limit (grows dynamically), More efficient than Stack and LinkedList.
+Set ->The Set interface represents a collection of unique elements. It does not allow duplicates.
+Tree Set(Sorted Order) -> TreeSet implements SortedSet and stores elements in natural or custom sorted order using a Red-Black tree.
+EnumSet -> EnumSet is a specialized Set implementation for use with enum types only. It is highly efficient and compact.
+HashSet(UnOrderd) -> HashSet is a non-ordered, non-indexed, and non-thread-safe implementation of the Set interface using a hash table.
+LinkedHashSet(Maintains insertion order) -> LinkedHashSet extends HashSet and maintains the insertion order of elements using a linked list.
+Map -> 
+HashMap ->
+LinkedHaspMap -> 
+HashTable -> 
+TreeMap -> 
+
+Collection Type		Maintains Order		AllowsNulls		Allows Duplicates		Thread-Safe
+_____________________________________________________________________________________________________________________________________
+ArrayList		✅ Yes		      ✅ Yes			✅ Yes			   	❌ No
+LinkedList		✅ Yes	              ✅ Yes	            	✅ Yes	               		❌ No
+Vector	                ✅ Yes	              ✅ Yes	            	✅ Yes	  	        	✅ Yes
+Stack	                ✅ Yes	              ✅ Yes	            	✅ Yes	               		✅ Yes
+HashSet	                ❌ No	              ✅ Yes	            	❌ No	               		❌ No
+LinkedHashSet	        ✅ Yes	              ✅ Yes	            	❌ No	               		❌ No
+TreeSet	                ✅ Sorted	      ❌ No	            	❌ No	               		❌ No
+PriorityQueue	        ✅ Priority Order     ❌ No	            	✅ Yes	               		❌ No
+ArrayDeque	        ✅ Yes	              ❌ No	            	✅ Yes	               		❌ No
+HashMap	                ❌ No	              ✅ Yes                	❌ Keys	         		❌ No
+LinkedHashMap	        ✅ Yes	              ✅ Yes	            	❌ Keys	         		❌ No
+TreeMap	                ✅ Sorted             ❌ No	            	❌ Keys	         		❌ No
+Hashtable	        ❌ No	              ❌ No	            	❌ Keys	         		✅ Yes
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+Generics -> Type-safe, Reusable
+Exceptions -> Checked Exceptions (Compile Time Errors), UnChecked Exceptions (Runtime Errors), Errors. try, catch, finally, throw, throws, custom exception.
+StringTokenizer
+File Handling -> Create, Rename, Delete, FileReader, BufferReader, Scanner, FileWriter, BufferWriter, Path, Copy File
+Functional Programming(Functions can act just like variables) -> Lambda
+Streams -> filter, forEach, sorted, distinct, map, collect, flatMap, reduce, limit, skip, allMatch, range, peek, findFirst, Count
+Optional -> Its wrap a value that might be null, of(), ofNullabel(), empty()
+MultiThreading -> means running multiple threads (smaller units of a process) simultaneously.Each thread runs independently but shares the same memory 
+space, allowing efficient communication and resource sharing. -> Thread Class, Runnable Interface, -> start(), run(), sleep(), join(), interrupt(), yield(),
+wait(), notify(), notifyAll()
+Garbage Collection
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+JDK 1.0	1996		Basic language features, AWT, applets
+JDK 1.2	1998		Swing, Collections Framework
+JDK 1.4	2002		Assertions, NIO, Logging API
+Java 5	2004		Generics, Annotations, Enums, Varargs
+Java 6	2006		Scripting API, Compiler API, improvements to Web Services
+Java 7	2011		Try-with-resources, Diamond operator, NIO.2
+Java 8	2014		Lambda expressions, Streams API, Optional, Date-Time API
+Java 9	2017		Module System (Project Jigsaw), JShell
+Java 10	2018		Local-variable type inference (var)
+Java 11	2018		LTS release, HTTP Client API, String methods
+Java 12–16 2019		Switch expressions, Text blocks, Records, Pattern Matching (preview)
+Java 17	2021		LTS release, Sealed Classes, Enhanced Pseudo-Random Number Generators
+Java 18–20 2022		Virtual Threads (preview), Structured Concurrency (incubator), Scoped Values
+Java 21	2023		LTS release, Sequenced Collections, Record Patterns, Virtual Threads
+Java 22	2024		String Templates, Stream Gatherers, Implicit Classes, Class-File API

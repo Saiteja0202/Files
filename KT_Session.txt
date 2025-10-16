@@ -1,0 +1,20 @@
+KT -> 15-10-2025 -> Arijit
+
+Azure Board -> AZDO(Azure Devops), ART(Agile release trainee) -> ACE(Annuity Customer Experience)-> Boards (RIS Administration -> Benefits, Controls, Payments) (RIS Annuitatnt Experience -> RIS Correspondance)
+controls -> Establish, Risk Prevention in code
+Issue Payment Batch release bulk payments annutants 
+Immediate pay -> single payment
+Differed pay -> installment
+
+Regions -> INTA, INTG, Dev A, Dev B(I), QA
+UI -> DB - relationship
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+KT -> 16-10-2025 -> Ankit
+
+Plan Sponsor -> company , they provide a plan to there employees
+contract -> metlife & plan sponsor
+plan -> Plan benefit type (Herman Miller.INC)
+Data Loading -> File loading
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+KT -> 

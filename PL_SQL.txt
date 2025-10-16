@@ -1,0 +1,7 @@
+PL/SQL, which stands for Procedural Language extensions to the Structured Query Language (SQL).
+Blocks -> Anonymous Blocks and Named Blocks
+Declaration Section -> DECLARE
+Executable Section -> BEGIN - END
+Exception-Handling Section(optional) -> EXCEPTION
+Variable -> 
+Anchored Data Type -> Data type which we assign to a variable based on a database object. 
